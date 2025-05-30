@@ -1,4 +1,4 @@
-# PhyX
+# Project Repo of Swing-bench
 
 
 # Website License
