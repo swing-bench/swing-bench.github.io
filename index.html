@@ -118,10 +118,10 @@
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title is-bold">
               <img src="static/images/swingarena_logo.jpg" style="width:1em;vertical-align: middle" alt="Logo"/>
-              <span class="mmmu" style="vertical-align: middle">Swing-Bench</span>
+              <span class="mmmu" style="vertical-align: middle">Swing-Arena</span>
             </h1>
             <h2 class="subtitle is-3 publication-subtitle">
-              Can the LLMs submit valid code that passes CI and peer review?
+              Competitive Programming Arena for Long-context GitHub Issue Solving
             </h2>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
@@ -196,7 +196,7 @@
                   </a>
                 </span> -->
                 <span class="link-block" style="margin-right: 12px;">
-                  <a href="https://arxiv.org/abs/2505.15929" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://arxiv.org/pdf/2505.23932" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
@@ -215,7 +215,7 @@
               </span> -->
                 <!-- Code Link. -->
                 <span class="link-block" style="margin-right: 12px;">
-                  <a href="https://github.com/NastyMarcus/PhyX"
+                  <a href="https://github.com/menik1126/Swing-Bench"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -224,20 +224,20 @@
                   </a>
                 </span>
                 <!-- Dataset Link. -->
-                <span class="link-block" style="margin-right: 12px;">
+                <!-- <span class="link-block" style="margin-right: 12px;">
                   <a href="https://huggingface.co/datasets/Cloudriver/PhyX"
                     class="external-link button is-normal is-rounded is-dark">
                     <span>🤗 Dataset</span>
                   </a>
-                </span>
-                <span class="link-block">
+                </span> -->
+                <!-- <span class="link-block">
                   <a href="https://x.com/HuiShen_umich/status/1926287100132925504" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon has-text-white">
                       <i class="fa-brands fa-x-twitter"></i>
                     </span>
                     <span>Twitter</span>
                   </a>
-                </span>
+                </span> -->
               </div>
 
             </div>
@@ -253,7 +253,7 @@
         <img src="./static/images/overview.png" alt="Dataset overview." style="max-width: 80%; height: auto;"/>
         <p>
           <!-- <span class="dnerf">Nerfies</span> -->
-          Data examples of the PhyX dataset. The dataset contains 3,000 human-annotated physics problems with visual context.
+          Illustration of the SwingArena adversarial evaluation framework.
         </p>
       </div>
     </div>
@@ -267,26 +267,24 @@
           <h2 class="title is-3">🔔News</h2>
           <div class="content has-text-justified">
             <p>
-              <b>🔥 [2025-05-27]: PhyX is officially supported by <a href="https://github.com/open-compass/VLMEvalKit">VLMEvalKit</a> for easy evalution! 🎉</b>
-            </p>
-            <p>
-              <b>🚀 [2025-05-23]: The <a href="https://arxiv.org/abs/2505.15929">arXiv paper</a> is online! 🚀</b>
-            </p>
-            <p>
-              <b>🚀 [2025-05-21]: We release the testmini set of Swing-Arena at <a href="https://huggingface.co/datasets/Cloudriver/PhyX">Huggingface</a> and the <a href="https://github.com/NastyMarcus/PhyX">evaluation code</a>! 🚀</br>
+              <b>🚀 [2025-06-05]: We release the <a href="https://github.com/menik1126/Swing-Bench?tab=readme-ov-file">Swing-Arena</a>! 🚀</br>
             </p>
         </div>
           <h2 class="title is-3">Introduction</h2>
           <div class="content has-text-justified">
             <p>
-              We introduce <b>PhyX</b>: the first large-scale benchmark designed to assess 
-              models capacity for physics-grounded reasoning in visual scenarios. 
-              PhyX includes <b>3K</b> meticulously curated multimodal questions spanning <b>6 reasoning types</b>
-               across <b>25 sub-domains</b> and <b>6 core physics domains</b>: thermodynamics, electromagnetism,
-               mechanics, modern physics, optics, and wave\&acoustics. 
-               In our comprehensive evaluation, even state-of-the-art models struggle significantly with physical reasoning.
-                <b>GPT-4o, Claude3.7-Sonnet, and GPT-o4-mini achieve only 32.5%, 42.2%, and 45.8% </b>
-                accuracy respectively-performance gaps exceeding 29\% compared to human experts.
+            We present <b>SwingArena</b>, an adversarial evaluation framework for Large Language Models (LLMs) 
+            that approximates real-world software development workflows. Unlike traditional static benchmarks, 
+            <b>SwingArena</b> models the collaborative process of software iteration by pairing LLMs as <i>submitters</i>,
+             who generate patches, and <i>reviewers</i>, who create test cases and verify the patches through 
+             continuous integration (CI) pipelines. To support these interactive evaluations, we introduce a 
+             retrieval-augmented code generation (RACG) module that handles long-context challenges by providing relevant 
+             code snippets from large codebases across multiple programming languages (C++, Python, Rust, and Go). 
+             Our adversarial evaluation can surface limitations that are often overlooked by traditional evaluation settings.
+              Our experiments, using over 400 high-quality real-world GitHub issues selected from a pool of 2,300 issues,
+               indicate differing behavioral tendencies across models in patch generation versus validation. 
+               <b>SwingArena</b> offers a scalable and extensible approach to evaluating LLMs in CI-driven 
+               software development settings.
             </p>
           </div>
         </div>
@@ -299,7 +297,7 @@
     <div class="hero-body has-text-centered">
       <h1 class="title is-1 mmmu">
         <img src="static/images/PhyX_Logo.png" style="width:1em;vertical-align: middle" alt="Logo"/>
-        <span class="mmmu">PhyX Benchmark</span>
+        <span class="mmmu">Swing-Arena</span>
       </h1>
     </div>
   </section>
@@ -308,17 +306,14 @@
     <div class="container">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Comparisons with Existing Benchmarks</h2>
+          <h2 class="title is-3">Overview of <b>Swing-Arena</b> data construction pipeline</h2>
           <div class="content has-text-justified">
             <p>
-              To further distinguish the difference between <i>PhyX</i> and other existing ones, we elaborate the benchmark details in Figure.
-              From the <i>realistic</i> perspective, the prior benchmarks are heavily focused on abstract lining.
-              In contrast, our benchmark are realistic and delete text redundancy.
+              The data construction pipeline for <b>Swing-Arena</b> consists of several key stages, including repository collection, 
+              pull request extraction, task instance creation, quality filtering, and multiple CI-based validation.
             </p>
             <div class="content has-text-centered">
               <img src="static/images/comparison.png" alt="comparison with existing benchmarks" class="center">
-              <img src="static/images/comparison_with_physics.png" alt="comparison with existing benchmarks" class="center">
-              <p> Comparison with existing physics benchmarks.</p>
             </div>
           </div>
         </div>
@@ -330,20 +325,14 @@
           <div class="carousel results-carousel">
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/overview.png" alt="sampled PhyX" width="95%"/>
-                <p> Sampled PhyX examples from each discipline.</p>
-              </div>
-            </div>
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static/images/statistics.png" alt="Key statistics" width="40%"/>
-                <p> Key statistics of the PhyX benchmark</p>
+                <img src="static/images/statistics.png" alt="Key statistics" width="95%"/>
+                <p> Clarity and Difficulty Distribution</p>
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
                 <img src="static/images/data_distribution.png" alt="Distribution of question domains" width="80%"/>
-                <p> Distribution of question domains in the PhyX dataset</p>
+                <p> Length distributions in different languages</p>
               </div>
             </div>
           </div>
@@ -365,7 +354,22 @@
   <section class="section">
     <div class="container">
 
-      <div class="columns is-centered m-6">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Main result of <b>Swing-Arena</b></h2>
+          <div class="content has-text-justified">
+
+            <div class="content has-text-centered">
+              <img src="static/images/main_result.png" alt="comparison with existing benchmarks" class="center">
+              <p>
+                Evaluation of Code Submission vs. Test Submission Capabilities Among Proprietary LLMs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="columns is-centered m-6">
         <div class="column is-full has-text-centered content">
           <h2 class="title is-3" id="leaderboard">Data</h2>
           <div class="content has-text-justified">
@@ -374,10 +378,10 @@
               href="https://github.com/NastyMarcus/PhyX">Github</a>.</p>
           </div>
         </div>
-      </div>
+      </div> -->
       
       <!-------------------------------------------------------------------- LEADERBOARD SECTION -------------------------------------------------------------------->
-      <div class="columns is-centered m-6">
+      <!-- <div class="columns is-centered m-6">
         <div class="column is-full has-text-centered content">
           <h2 class="title is-3" id="leaderboard">Leaderboard</h2>
           <div class="content has-text-justified">
@@ -430,17 +434,16 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <!-- Table body will be populated dynamically -->
                 </tbody>
               </table>
               <p class="test-desc"> Overall results of different models on the PhyX leaderboard. The best-performing model in each category is <b>in-bold</b>, and the second best is <u>underlined</u>. *: results provided by the authors.</p>
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
         <!-------------------------------------------------------------------- Error Analysis SECTION -------------------------------------------------------------------->
-        <div class="columns is-centered m-6">
+        <!-- <div class="columns is-centered m-6">
           <div class="column is-full has-text-centered content">
             <h2 class="title is-3">Error Analysis</h2>
             <div class="content has-text-justified">
@@ -456,10 +459,10 @@
               <p> Error distribution over 96 annotated GPT-4o errors.</p>
             </div>
           </div>
-        </div>
+        </div> -->
 
       <!-------------------------------------------------------------------- Error Example  -------------------------------------------------------------------->
-      <div class="columns is-centered m-6">
+      <!-- <div class="columns is-centered m-6">
         <div class="column is-full has-text-centered content">
           <h2 class="title is-3" id="examples">Error Examples</h2>
           <div class="carousel results-carousel">
@@ -528,11 +531,11 @@
                 <img src="static/images/error/13.png" alt="grade-lv" width="60%"/>
               </div>
             </div>
-            <!-- <div class="box m-5">
+            <div class="box m-5">
               <div class="content has-text-centered">
                 <img src="static/images/error/14.png" alt="grade-lv" width="60%"/>
               </div>
-            </div> -->
+            </div>
             <div class="box m-5">
               <div class="content has-text-centered">
                 <img src="static/images/error/15.png" alt="grade-lv" width="60%"/>
@@ -555,9 +558,9 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     <!-------------------------------------------------------------------- Correct Example -------------------------------------------------------------------->
-      <div class="columns is-centered m-6">
+      <!-- <div class="columns is-centered m-6">
         <div class="column is-full has-text-centered content">
           <h2 class="title is-3">Correct Examples</h2>
           <div id="results-carousel" class="carousel results-carousel">
@@ -623,22 +626,19 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@misc{shen2025phyxdoesmodelwits,
-        title={PhyX: Does Your Model Have the "Wits" for Physical Reasoning?}, 
-        author={Hui Shen and Taiqiang Wu and Qi Han and Yunta Hsieh and Jizhou Wang and Yuyue Zhang and Yuxin Cheng and Zijian Hao and Yuansheng Ni and Xin Wang and Zhongwei Wan and Kai Zhang and Wendong Xu and Jing Xiong and Ping Luo and Wenhu Chen and Chaofan Tao and Zhuoqing Mao and Ngai Wong},
-        year={2025},
-        eprint={2505.15929},
-        archivePrefix={arXiv},
-        primaryClass={cs.AI},
-        url={https://arxiv.org/abs/2505.15929}, 
-  }</code>
+      <pre><code>@article{xu2025swingarena,
+  title={SwingArena: Competitive Programming Arena for Long-context GitHub Issue Solving},
+  author={Xu, Wendong and Xiong, Jing and Zhao, Chenyang and Chen, Qiujiang and Wang, Haoran and Shen, Hui and Wan, Zhongwei and Dai, Jianbo and Wu, Taiqiang and Xiao, He and others},
+  journal={arXiv preprint arXiv:2505.23932},
+  year={2025}
+}</code>
   </pre>
     </div>
   </section>
