@@ -268,7 +268,7 @@
           <div class="content has-text-justified">
             <p>
               <b>🎉 [2026-01-30]: Our paper has been accepted by ICLR 2026! 🎉</br>
-              <b>🚀 [2026-01-30]: We open-sourced the code and dataset! Check out our <a href="https://github.com/menik1126/Swing-Bench">GitHub repo</a>! 🚀</br>
+              <b>🚀 [2026-01-30]: We open-sourced the code and dataset! Check out our <a href="https://github.com/menik1126/Swing-Bench">GitHub repo</a> and <a href="https://huggingface.co/datasets/SwingBench/SwingBench/tree/main">🤗 Hugging Face dataset</a>! 🚀</br>
               <b>🚀 [2025-06-05]: We release the <a href="https://github.com/menik1126/Swing-Bench?tab=readme-ov-file">Swing-Arena</a>! 🚀</br>
             </p>
         </div>
@@ -362,7 +362,213 @@
           <div class="content has-text-justified">
 
             <div class="content has-text-centered">
-              <img src="static/images/main_result.png" alt="comparison with existing benchmarks" class="center">
+              <style>
+                .results-table {
+                  margin: 20px auto;
+                  border-collapse: collapse;
+                  font-size: 14px;
+                  max-width: 95%;
+                  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                }
+                .results-table th {
+                  background-color: #4a90e2;
+                  color: white;
+                  padding: 12px 15px;
+                  text-align: center;
+                  font-weight: 600;
+                  border: 1px solid #ddd;
+                }
+                .results-table td {
+                  padding: 10px 15px;
+                  text-align: center;
+                  border: 1px solid #ddd;
+                }
+                .results-table tbody tr:hover {
+                  background-color: #f0f7ff;
+                }
+                .matchup-cell {
+                  text-align: left;
+                  font-weight: 500;
+                }
+                .separator-row {
+                  background-color: #e8e8e8;
+                  height: 5px;
+                }
+                .separator-row td {
+                  padding: 0;
+                  border: none;
+                }
+                .submitter-group-header {
+                  background-color: #d0e4f7;
+                  font-weight: 600;
+                  text-align: left;
+                }
+              </style>
+
+              <table class="results-table">
+                <thead>
+                  <tr>
+                    <th>Matchup</th>
+                    <th>Submitter</th>
+                    <th>Reviewer</th>
+                    <th>RPR</th>
+                    <th>SPR</th>
+                    <th>Win Rate</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- ChatGPT as Submitter -->
+                  <tr>
+                    <td class="matchup-cell">ChatGPT vs ChatGPT</td>
+                    <td>ChatGPT</td>
+                    <td>ChatGPT</td>
+                    <td>0.71</td>
+                    <td>0.68</td>
+                    <td>0.97</td>
+                  </tr>
+                  <tr>
+                    <td class="matchup-cell">ChatGPT vs Claude</td>
+                    <td>ChatGPT</td>
+                    <td>Claude</td>
+                    <td>0.65</td>
+                    <td>0.55</td>
+                    <td>0.90</td>
+                  </tr>
+                  <tr>
+                    <td class="matchup-cell">ChatGPT vs Gemini</td>
+                    <td>ChatGPT</td>
+                    <td>Gemini</td>
+                    <td>0.61</td>
+                    <td>0.55</td>
+                    <td>0.94</td>
+                  </tr>
+                  <tr>
+                    <td class="matchup-cell">ChatGPT vs DeepSeek</td>
+                    <td>ChatGPT</td>
+                    <td>DeepSeek</td>
+                    <td>0.61</td>
+                    <td>0.55</td>
+                    <td>0.94</td>
+                  </tr>
+
+                  <!-- Separator -->
+                  <tr class="separator-row">
+                    <td colspan="6"></td>
+                  </tr>
+
+                  <!-- Claude as Submitter -->
+                  <tr>
+                    <td class="matchup-cell">Claude vs ChatGPT</td>
+                    <td>Claude</td>
+                    <td>ChatGPT</td>
+                    <td>0.66</td>
+                    <td>0.55</td>
+                    <td>0.89</td>
+                  </tr>
+                  <tr>
+                    <td class="matchup-cell">Claude vs Claude</td>
+                    <td>Claude</td>
+                    <td>Claude</td>
+                    <td>0.62</td>
+                    <td>0.62</td>
+                    <td>1.00</td>
+                  </tr>
+                  <tr>
+                    <td class="matchup-cell">Claude vs Gemini</td>
+                    <td>Claude</td>
+                    <td>Gemini</td>
+                    <td>0.59</td>
+                    <td>0.55</td>
+                    <td>0.96</td>
+                  </tr>
+                  <tr>
+                    <td class="matchup-cell">Claude vs DeepSeek</td>
+                    <td>Claude</td>
+                    <td>DeepSeek</td>
+                    <td>0.64</td>
+                    <td>0.54</td>
+                    <td>0.90</td>
+                  </tr>
+
+                  <!-- Separator -->
+                  <tr class="separator-row">
+                    <td colspan="6"></td>
+                  </tr>
+
+                  <!-- Gemini as Submitter -->
+                  <tr>
+                    <td class="matchup-cell">Gemini vs ChatGPT</td>
+                    <td>Gemini</td>
+                    <td>ChatGPT</td>
+                    <td>0.61</td>
+                    <td>0.55</td>
+                    <td>0.94</td>
+                  </tr>
+                  <tr>
+                    <td class="matchup-cell">Gemini vs Claude</td>
+                    <td>Gemini</td>
+                    <td>Claude</td>
+                    <td>0.60</td>
+                    <td>0.56</td>
+                    <td>0.96</td>
+                  </tr>
+                  <tr>
+                    <td class="matchup-cell">Gemini vs Gemini</td>
+                    <td>Gemini</td>
+                    <td>Gemini</td>
+                    <td>0.72</td>
+                    <td>0.63</td>
+                    <td>0.91</td>
+                  </tr>
+                  <tr>
+                    <td class="matchup-cell">Gemini vs DeepSeek</td>
+                    <td>Gemini</td>
+                    <td>DeepSeek</td>
+                    <td>0.64</td>
+                    <td>0.64</td>
+                    <td>1.00</td>
+                  </tr>
+
+                  <!-- Separator -->
+                  <tr class="separator-row">
+                    <td colspan="6"></td>
+                  </tr>
+
+                  <!-- DeepSeek as Submitter -->
+                  <tr>
+                    <td class="matchup-cell">DeepSeek vs ChatGPT</td>
+                    <td>DeepSeek</td>
+                    <td>ChatGPT</td>
+                    <td>0.60</td>
+                    <td>0.55</td>
+                    <td>0.95</td>
+                  </tr>
+                  <tr>
+                    <td class="matchup-cell">DeepSeek vs Claude</td>
+                    <td>DeepSeek</td>
+                    <td>Claude</td>
+                    <td>0.60</td>
+                    <td>0.55</td>
+                    <td>0.95</td>
+                  </tr>
+                  <tr>
+                    <td class="matchup-cell">DeepSeek vs Gemini</td>
+                    <td>DeepSeek</td>
+                    <td>Gemini</td>
+                    <td>0.68</td>
+                    <td>0.64</td>
+                    <td>0.96</td>
+                  </tr>
+                  <tr>
+                    <td class="matchup-cell">DeepSeek vs DeepSeek</td>
+                    <td>DeepSeek</td>
+                    <td>DeepSeek</td>
+                    <td>0.70</td>
+                    <td>0.66</td>
+                    <td>0.96</td>
+                  </tr>
+                </tbody>
+              </table>
               <p>
                 Evaluation of Code Submission vs. Test Submission Capabilities Among Proprietary LLMs.
               </p>
